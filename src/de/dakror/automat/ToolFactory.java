@@ -41,7 +41,7 @@ public class ToolFactory
 		Helper.setRenderingHints(g, true);
 		if (tool.equals("Zustand"))
 		{
-			g.setColor(text.equals("0") ? Color.cyan : Color.gray);
+			g.setColor(text.equals("0") ? Color.decode("#7777ff") : Color.gray);
 			g.fillArc(0, 0, size - 1, size - 1, 0, 360);
 			g.setColor(Color.black);
 			g.drawArc(0, 0, size - 1, size - 1, 0, 360);

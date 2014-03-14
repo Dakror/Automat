@@ -60,14 +60,17 @@ public class Automat extends JFrame
 	{
 		final JButton state = new JButton(ToolFactory.getIconForTool(tool, ""));
 		state.setName(tool);
-		if (placable) state.addActionListener(new ActionListener()
+		if (placable)
 		{
-			@Override
-			public void actionPerformed(ActionEvent e)
+			state.addActionListener(new ActionListener()
 			{
-				selectedTool = state.getName();
-			}
-		});
+				@Override
+				public void actionPerformed(ActionEvent e)
+				{
+					selectedTool = state.getName();
+				}
+			});
+		}
 		state.setFocusPainted(false);
 		state.setToolTipText(tool);
 		toolBar.add(state);
